@@ -1,0 +1,13 @@
+<div class="drapBox">
+  <div id="drop" (dragenter)="dragenter($event)" (dragover)="dragover($event)" (dragleave)="dragleave($event)" (drop)="drop($event)" [ngClass]="{'dragover':isdragover,'notdragover':!isdragover}">
+      <div class="desc">Drag files here, or</div>
+      <label for="file" class="input_desc">
+          <input class="drag-message-input" type="file" id="file" name="file" (change)="inputFile($event)" />
+          <span class="drag-message-manual">click to select</span>
+      </label>
+  </div>
+  <div id="selectedFilesBox" class="absflex" *ngIf="selectedFilesName.length>0">
+      <div class="allFileDesc">{{selectedFilesCount}} files selected:</div> 
+      <div class="fileDesc" *ngFor="let item of selectedFilesName">{{item}}</div>
+  </div>
+</div>
