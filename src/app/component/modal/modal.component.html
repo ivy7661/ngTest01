@@ -1,0 +1,26 @@
+<!-- <div class="modal" [class.show]="show | async">
+  <div class="modal-body">
+    <ng-content></ng-content>
+    <p>
+      <button type="button" (click)="close()">關閉</button>
+    </p>
+  </div>
+</div>
+
+<div class="modal-backdrop" [class.show]="show | async"></div> -->
+
+<div class="modal" [class.show]="show | async">
+  <div class="modal-header">
+    <p class="modal-header__text">Request type</p>
+    <button type="button" class="modal-header__btn" (click)="close()">X</button>
+  </div>
+  <div class="modal-body">
+   <div class="modal-body-item">
+    <div class="modal-body-item__text">New</div>
+    <div class="modal-body-item__caption">Create a new EDA file.</div>
+   </div>
+   
+  </div>
+</div>
+
+<div class="modal-backdrop" [class.show]="show | async"></div>

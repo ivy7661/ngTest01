@@ -1,0 +1,12 @@
+.list,.list__item {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+  
+  a {
+    text-decoration: none;
+    color: #fa0;
+  font-weight: 600;
+  }
+}
