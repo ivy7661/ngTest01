@@ -31,6 +31,8 @@
   .modal-body {
     max-width: 500px;
     margin: 0 auto;
+
+    
   }
 
   .modal-header {
@@ -51,6 +53,10 @@
   .modal-body-item {
     display: flex;
   }
+}
+
+.modal-body-item:nth-child(2) .modal-body-item__text {
+  color: yellow;
 }
 
 .modal.show {
