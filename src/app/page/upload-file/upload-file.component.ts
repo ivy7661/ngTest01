@@ -35,16 +35,16 @@ export class UploadFileComponent {
     console.log("dragenter");
   }
   drop(e:any){
-   e.stopPropagation();
-   e.preventDefault();
-   this.isdragover=false;
-   let dataTransfer=e.dataTransfer;
-   let files=dataTransfer.files;
-   console.log("files:");
-   console.log(files);
-   this.showSelectedFiles(files);
-   this.handleFiles(files).subscribe();
- }
+    e.stopPropagation();
+    e.preventDefault();
+    this.isdragover=false;
+    let dataTransfer=e.dataTransfer;
+    let files=dataTransfer.files;
+    console.log("files:");
+    console.log(files);
+    this.showSelectedFiles(files);
+    this.handleFiles(files).subscribe();
+  }
   inputFile(e:any){
     console.log(e.target.files);
     this.showSelectedFiles(e.target.files);

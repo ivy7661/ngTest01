@@ -1,1 +1,10 @@
 <p>tab1 works!</p>
+<ng-scrollbar style="height: 200px; width: 300px;"
+[visibility]="'native'">
+  <div *ngFor="let item of items" class="item">
+    {{ item }}
+  </div>
+</ng-scrollbar>
+
+
+

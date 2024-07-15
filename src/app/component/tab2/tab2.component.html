@@ -1,1 +1,17 @@
 <p>tab2 works!</p>
+
+<div
+  class="file-drop-area"
+  (dragover)="onDragOver($event)"
+  (dragleave)="onDragLeave($event)"
+  (drop)="onDrop($event)">
+  <p>拖放文件到這裡</p>
+  <!-- <input type="file" (change)="onFileSelected($event)" multiple hidden #fileInput> -->
+  <!-- <button (click)="fileInput.click()">選擇文件</button> -->
+</div>
+<div *ngIf="files.length">
+  <h3>已選擇文件：</h3>
+  <ul>
+    <li *ngFor="let file of files">{{ file.name }}</li>
+  </ul>
+</div>
